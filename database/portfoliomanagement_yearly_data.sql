@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: portfoliomanagement
+-- Host: 127.0.0.1    Database: portfoliomanagement
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
@@ -24,14 +24,13 @@ DROP TABLE IF EXISTS `yearly_data`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `yearly_data` (
   `StockID` int NOT NULL,
-  `Year` tinytext NOT NULL,
-  `average_stock_value` decimal(2,0) NOT NULL,
-  `outstanding_share` decimal(2,0) NOT NULL,
+  `Year` int DEFAULT NULL,
+  `average_stock_value` double DEFAULT NULL,
+  `outstanding_share` int DEFAULT NULL,
   `yearly_id` int NOT NULL,
   PRIMARY KEY (`yearly_id`),
   KEY `stockID_idx` (`StockID`),
-  KEY `yearlyStockID_idx` (`StockID`),
-  CONSTRAINT `yearlyStockID` FOREIGN KEY (`StockID`) REFERENCES `stocks` (`stockInfoID`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `yearlyStockID_idx` (`StockID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -41,6 +40,7 @@ CREATE TABLE `yearly_data` (
 
 LOCK TABLES `yearly_data` WRITE;
 /*!40000 ALTER TABLE `yearly_data` DISABLE KEYS */;
+INSERT INTO `yearly_data` VALUES (1,2022,57.9032,498,1),(1,2021,57.4256,505,2),(1,2020,38.1175,501,3),(1,2019,30.0182,501,4),(1,2018,27.055,503,5),(1,2017,21.9499,509,6),(1,2016,19.4994,506,7),(1,2015,15.2294,514,8),(1,2014,11.6744,519,9),(1,2013,9.1953,514,10),(1,2012,6.7055,518,11),(1,2011,6.9735,540,12),(1,2010,5.5733,620,13),(1,2009,5.7021,644,14);
 /*!40000 ALTER TABLE `yearly_data` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-16  5:46:03
+-- Dump completed on 2023-03-17 16:25:00

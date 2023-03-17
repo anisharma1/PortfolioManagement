@@ -23,8 +23,8 @@ cursor.execute("USE portfoliomanagement")
 # Fetching information from table
 # Converting into database
 cursor.execute("select * from valuation_stocks")
-df = pd.DataFrame(cursor.fetchall(), columns = ['stockId', 'date', 'open', 'high', 'low', 'close', 'adj_close', 'volume'])
-
+df = pd.DataFrame(cursor.fetchall(), columns = ['stockId', 'date', 'open', 'high', 'low', 'close', 'adj_close', 'volume','ID'])
+plt.ioff()
 # DMA calculations
 DMA={}
 temp=0
@@ -42,13 +42,12 @@ temp1=[]
 for i in DMA.keys():
   temp1.append(DMA[i])
 ypoints = np.array(temp1)
-
+fig = plt.figure()
 plt.plot(ypoints, color = 'b')
 plt.xlabel("Date")  # add X-axis label
 plt.ylabel("Averages")  # add Y-axis label
 plt.title("DMA")  # add title
 plt.show()
-
 
 # Plots for stock chart movement
 ypoints1 = np.array(df["close"])
@@ -61,11 +60,10 @@ plt.ylabel("Price")  # add Y-axis label
 plt.title("Stock Chart movement of stock prices with date")  # add title
 plt.show()
 
-
 # Fetching information from table
 # Converting into database
 cursor.execute("select * from quarterly_data")
-quarterly_data = pd.DataFrame(cursor.fetchall(), columns = ['stockID', 'dateMonthYear', 'netIncome',"sharesOutsanding" ])
+quarterly_data = pd.DataFrame(cursor.fetchall(), columns = ['stockID', 'dateMonthYear', 'netIncome',"sharesOutsanding" ,"ID"])
 
 
 # Plot for outstanding shares
@@ -76,7 +74,6 @@ plt.xlabel("Date")  # add X-axis label
 plt.ylabel("Number of Shares")  # add Y-axis label
 plt.title("Outstanding Shares")  # add title
 plt.show()
-
 
 
 # For converting net income string ti integer
@@ -100,12 +97,26 @@ for ind1 in quarterly_data.index:
 
 print("EPS")
 print(EPS)
+temp=1
+temp1=0
+for i in EPS:
+    sql = "INSERT INTO eps (ID , date , epsCalculated) VALUES (%s,%s, %s)"
+    val = (temp,i, EPS[i])
+    temp+=1
+    try:
+        cursor.execute(sql, val)
+    except:
+      temp1+=1
+
+print(temp1,"dates are repeated")
+
+
 
 
 # Fetching information from table
 # Converting into database
 cursor.execute("select * from yearly_data")
-df = pd.DataFrame(cursor.fetchall(), columns = ['StockID', 'Year', 'average_stock_value', 'outstanding_share'])
+df = pd.DataFrame(cursor.fetchall(), columns = ['StockID', 'Year', 'average_stock_value', 'outstanding_share',"ID"])
 
 # For Market Capitalization
 MarketCap={}
@@ -114,4 +125,18 @@ for ind1 in df.index:
 
 print("Market Capitalization")
 print(MarketCap)
+temp=1
+temp1=0
+for i in MarketCap:
+    sql = "INSERT INTO marketcap(ID , year , mcCalculated) VALUES (%s,%s, %s)"
+    val = (temp,i, MarketCap[i])
+    temp+=1
+    try:
+        cursor.execute(sql, val)
+    except:
+      temp1+=1
+
+print(temp1,"year are repeated")
+
+mydb.commit()
 
