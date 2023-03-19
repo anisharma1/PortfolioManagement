@@ -1,12 +1,15 @@
 <p>
-	<a href="{% url 'PortfolioManagerHome:index' %}">Portfolio Manager</a>
-	<a href="{% url 'PortfolioManagerHome:about' %}">About</a>
 	{% if user.is_authenticated %}
-		Hello, {{ user.username }}.
+		Hello, {{ user.username          }}.
+		<a href="{% url 'PortfolioManagerHome:index' %}">Home</a>
+		<a href="{% url 'users:dashboard' %}">Dashboard</a>
+		<a href="{% url 'users:stockprofiles' %}">Stock_Profiles</a>
 		<a href="{% url 'users:logout' %}">Log Out</a>
  	{% else %}
+		<a href="{% url 'PortfolioManagerHome:index' %}">Home</a>
  		<a href="{% url 'users:register' %}">Register</a> -
 		<a href="{% url 'users:login' %}">Log In</a>
+		<a href="{% url 'PortfolioManagerHome:about' %}">About</a>
 	{% endif %}
 </p>
 {% block content %}{% endblock content %}

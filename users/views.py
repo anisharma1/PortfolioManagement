@@ -13,10 +13,20 @@ def register(request) :
 		form = UserCreationForm(data=request.POST)
 
 		if form.is_valid():
-			new_user = form.save() 
+			new_user = form.save()
 			#Log the user in and redirect to home page
 			login(request, new_user)
 			return redirect('PortfolioManagerHome:index')
 	#Display a blank or invalid form
 	context = {'form':form}
 	return render(request, 'registration/register.html', context)
+
+def logout(request):
+  return render(request, 'portfolio/logout.html')
+
+
+def dashboard(request):
+  return render(request, 'portfolio/dashboard.html')
+
+def stockprofiles(request):
+  return render(request, 'portfolio/stockprofiles.html')
