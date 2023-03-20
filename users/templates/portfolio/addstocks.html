@@ -1,0 +1,23 @@
+{% extends "PortfolioManagerHome/base.html" %}
+
+{% for stock in Stocks %}
+<form action= "{% url 'delete' stock.id %}" method="POST" >{% csrf_token%}
+      <div class="card">
+        <div class="card-body" style="background-color:rgba(186, 216, 218, 0.8);position:relative;padding: 2px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);width:600px;top: 50%;left: 10%;">
+        <h3 class="card-title" style="text-align: center;"><b>{{stock.name}}</b></h3><hr>
+          <div class="col-md-6">
+            <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>open:</strong> {{stock.open}}</p>
+            <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>high:</strong> {{stock.high}}</p>
+          </div>
+          <div class="col-md-6" style="opacity:0.5" background-color:rgba(186, 216, 218, 0.8)";>
+            <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>low:</strong> {{stock.low}}</p>
+            <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>close:</strong> {{stock.close}}</p>
+          </div>
+          <p style="margin-left: 53px;font-size:24px" class="card-text"><strong>Quantity:</strong>
+          <input type="number"  required value="{{stock.quantity}}" name="qts" min="1" max="10"></p>
+          <p style="margin-left: 53px;font-size:24px" class="card-text"><strong>Value:</strong> {{stock.close}}</p>
+          <input  type="submit" value="Purchase" class="btn btn-primary" style="font-size:28px;position:relative;left:250px">
+        </div>
+      </div>
+</form>
+{% endfor %}

@@ -18,24 +18,20 @@
                     <h1>MY PORTFOLIO</h1>
                         <table class="table table-striped custab">
                             <tr>
-                                <td><strong>ID</strong></td>
-                                <td>{{u.id}}</td>
-                               </tr>
-                            <tr>
                                 <td><strong>Username</strong></td>
                                 <td>{{u.username}}</td>
                             </tr>
                             <tr>
                                 <td><strong>Portfolio Value</strong></td>
+                                <td>{{u.total_current_value}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Portfolio Investment</strong></td>
                                 <td>{{u.total_investment}}</td>
                             </tr>
                             <tr>
                                 <td><strong>Net Profit/Loss</strong></td>
                                 <td>{{u.total_pl}}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Current Holdings</strong></td>
-                                <td>{{u.holdings}}</td>
                             </tr>
                         </table>
                 </div>
