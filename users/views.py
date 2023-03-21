@@ -21,10 +21,6 @@ def register(request) :
 	context = {'form':form}
 	return render(request, 'registration/register.html', context)
 
-def logout(request):
-  return render(request, 'portfolio/logout.html')
-
-
 def dashboard(request):
   return render(request, 'portfolio/dashboard.html')
 
