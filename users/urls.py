@@ -11,7 +11,6 @@ urlpatterns = [
 
     #My Page
     path('register/', views.register, name='register'),
-    path('logout/', views.logout, name='logout'),
 
     path('stockprofiles/', views.stockprofiles, name='stockprofiles'),
     path('dashboard/', views.dashboard, name='dashboard'),
