@@ -1,0 +1,47 @@
+{% include "PortfolioManagerHome/base.html" %}
+
+<div class="container portfolio">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading"></div>
+        </div>
+    </div>
+    <div class="bio-info">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bio-content">
+                    <h1>MY PORTFOLIO</h1>
+                    {% for curUser in curUser %}
+                    <tr>
+                        <td><strong>Username</strong></td>
+                        <td>{{curUser.name}}</td>
+                    </tr>
+                   
+                        <table class="table table-striped custab">
+                           
+                          
+                            <tr>
+                                <td><strong>Portfolio Value</strong></td>
+                                <td>{{curUser.total_current_value}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Portfolio Investment</strong></td>
+                                <td>{{curUser.total_investment}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Net Profit/Loss</strong></td>
+                                <td>{{curUser.total_pl}}</td>
+                            </tr>
+                            
+                        </table>
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
