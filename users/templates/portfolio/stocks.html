@@ -1,0 +1,32 @@
+{% include "PortfolioManagerHome/base.html" %}
+{% for p in Stocks %}
+
+  <div class="row">
+    <div class="card w-75 col-md-6">
+      <div class="card-body"
+        style="background-color:rgba(186, 216, 218, 0.8);position:relative;padding: 2px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width:600px;top: 50%;left: 10%;">
+        <h3 class="card-title" style="text-align: center;"><b>{{p.name}}</b></h3>
+        <hr>
+        {% for red in ValuationStocks %}
+        <div class="col-md-6">
+          <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>open:</strong> {{red.open}}</p>
+          <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>high:</strong> {{red.high}}</p>
+
+        </div>
+        <div class="col-md-6">
+          <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>low:</strong> {{red.low}}</p>
+          <p style="margin-left: 40px;font-size:24px" class="card-text"><strong>close:</strong> {{red.close}}</p>
+        </div></br>
+        <p style="margin-left: 53px;font-size:24px" class="card-text"><strong>Quantity:</strong>
+          <input type="number" required name="qts" min="1" max="10"></p>
+        <p style="margin-left: 53px;font-size:24px" class="card-text"><strong>Value:</strong> {{red.close}}</p>
+        {% endfor %}
+        <input type="submit" value="add" class="btn btn-primary"
+          style="font-size:28px;position:relative;left:250px"></br>
+       
+      </div></br>
+
+    </div>
+  </div>
+
+{% endfor %}

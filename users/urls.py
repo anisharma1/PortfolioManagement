@@ -1,0 +1,21 @@
+"""Defines URL patterns for users"""
+
+from django.urls import path, include
+
+from . import views
+
+app_name = 'users'
+urlpatterns = [
+    #Include default auth urls.
+    path('', include('django.contrib.auth.urls')),
+
+    #My Page
+    path('register/', views.register, name='register'),
+    path('logout/', views.logout, name='logout'),
+    # path('stockadded/<int:slug>',views.addstocks,name='addstocks'),
+    # path('stockdeleted/<int:slug>',views.deletestocks,name='deletestocks'),
+    path('stockprofiles/', views.stockprofiles, name='stockprofiles'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('stocks/', views.stocks, name='stocks'),
+    
+]

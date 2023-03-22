@@ -1,0 +1,32 @@
+{% include "PortfolioManagerHome/base.html" %}
+
+<div class="col-md-6">
+  <div class="bio-content">
+      <h1>MY Stocks</h1>
+          <table class="table table-striped custab">
+            {% for ch in CurrentHoldings %}
+              <tr>
+                  <td><strong>Stock-Name</strong></td>
+                  <td>Tesla</td>
+              </tr>
+              <tr>
+                  <td><strong>Quantity Held:</strong></td>
+                  <td>{{ch.quantity}}</td>
+              </tr>
+              <tr>
+                  <td><strong>Investment in Stock:</strong></td>
+                  <td> {{ch.investment_in_stock}}</td>
+              </tr>
+              <tr>
+                <td><p><input type="number" required name="qts" min="1" max="10"></p></td>
+                <td><input type="submit" value="delete"> </input></td>
+              </tr>
+              
+              {% endfor %}
+       
+          </table>
+  </div>
+</div>
+
+
+
