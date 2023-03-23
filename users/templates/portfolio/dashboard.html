@@ -15,16 +15,16 @@
             </div>
             <div class="col-md-6">
                 <div class="bio-content">
-                    <h1>MY PORTFOLIO</h1>
+                    <h1>My Portfolio</h1>
                     {% for curUser in curUser %}
                     <tr>
                         <td><strong>Username</strong></td>
                         <td>{{curUser.name}}</td>
                     </tr>
-                   
+
                         <table class="table table-striped custab">
-                           
-                          
+
+
                             <tr>
                                 <td><strong>Portfolio Value</strong></td>
                                 <td>{{curUser.total_current_value}}</td>
@@ -37,7 +37,7 @@
                                 <td><strong>Net Profit/Loss</strong></td>
                                 <td>{{curUser.total_pl}}</td>
                             </tr>
-                            
+
                         </table>
                         {% endfor %}
                 </div>

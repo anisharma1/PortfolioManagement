@@ -2,7 +2,7 @@
 
 <div class="col-md-6">
   <div class="bio-content">
-      <h1>MY Stocks</h1>
+      <h1>My Stocks</h1>
           <table class="table table-striped custab">
             {% for ch in CurrentHoldings %}
               <tr>
@@ -21,12 +21,9 @@
                 <td><p><input type="number" required name="qts" min="1" max="10"></p></td>
                 <td><input type="submit" value="delete"> </input></td>
               </tr>
-              
+
               {% endfor %}
-       
+
           </table>
   </div>
 </div>
-
-
-

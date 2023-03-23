@@ -28,7 +28,6 @@ def logout(request):
 
 
 def dashboard(request):
-
   curUser=Users.objects.filter(name=request.user.username)
   return render(request,'portfolio/dashboard.html',{'curUser' :curUser})
 
@@ -41,13 +40,12 @@ def stocks(request):
   stock_list = Stocks.objects.all()
   red=ValuationStocks.objects.filter(date='2018-02-27')
   return render(request, 'portfolio/stocks.html', {'Stocks': stock_list,'ValuationStocks':red})
-  
 
-  
+
+
 # def deletestocks(request, slug):
 #   return render(request, 'stockprofiles.html')
 
 
 # def addstocks(request, slug):
 #   return render(request, 'stockprofiles.html')
-
