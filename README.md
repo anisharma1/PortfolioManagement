@@ -7,10 +7,10 @@
  
  
 * ### TABLE OF CONTENTS
-   * [GETTING STARTED]<img src="https://github.com/Snehil0603/PortfolioManagement/main/README.md#getting-started"></img>
-   * [OVERVIEW]<img src="https://github.com/Snehil0603/PortfolioManagement/main/README.md#overview"></img>
-   * [FUTURE SCOPE]<img src="https://github.com/Snehil0603/PortfolioManagement/main/README.md#future-scope"></img>
-   * [OUR GROUP]<img src="https://github.com/Snehil0603/PortfolioManagement/main/README.md#our-group"></img>
+   * [GETTING STARTED](https://github.com/Snehil0603/PortfolioManagement/blob/main/README.md#getting-started)
+   * [OVERVIEW](https://github.com/Snehil0603/PortfolioManagement/blob/main/README.md#overview)
+   * [FUTURE SCOPE](https://github.com/Snehil0603/PortfolioManagement/blob/main/README.md#future-scope)
+   * [OUR GROUP](https://github.com/Snehil0603/PortfolioManagement/blob/main/README.md#our-group)
    
  <hr>  
    
