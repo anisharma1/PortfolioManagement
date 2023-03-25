@@ -31,10 +31,10 @@
          * `pip install -r requirements.txt`
        * open cmd and run the commands to create the database :
          * `mysql -u root -p`
-         * `CREATE DATABASE portfoliomanagement`
-         * `USE DATABASE portfoliomanagement`
+         * `CREATE DATABASE portfoliomanagement;`
+         * `USE portfoliomanagement;`
        * To get database files in your PC run this command for all .sql files in database folder :
-          * `mysql > source file_path_with_file_name.sql`
+          * `mysql > source file_path_with_file_name.sql;`
        * Open setting.py file in PortfolioManager folder and change database section to this : 
        <img src="https://user-images.githubusercontent.com/96441611/227181216-391d9495-4f78-4682-9a22-687cf4cf38c1.png"></img>
        * Make your migrations : 
