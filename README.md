@@ -50,11 +50,11 @@
     * ### REGISTER
       <img src="https://user-images.githubusercontent.com/111197294/227714950-55ed6f37-df06-4924-b74d-3f066fbe4e61.png" width="600"></img>
     * #### HOME
-      <img src="https://user-images.githubusercontent.com/96441611/227183299-162c32a3-8162-4d6c-8da4-a167eea1c162.png" width="600"></img>
+      <img src="![image](https://user-images.githubusercontent.com/111197294/227730048-9131b3d1-ecc0-4068-8181-f9d884365094.png)" width="600"></img>
     * #### DASHBOARD
       <img src="https://user-images.githubusercontent.com/96441611/227183321-2a2e96e0-e77d-4cc0-8a71-550047cd7311.png " width="400"></img>
     * #### ALL_STOCKS_PROFILES
-       <img src="https://user-images.githubusercontent.com/96441611/227183334-5d7c7422-13c8-4ee3-9368-5b4c751419de.png" width="400"></img>
+       <img src="![Uploading image.png…]()" width="400"></img>
     * #### MY STOCKS
       <img src="https://user-images.githubusercontent.com/96441611/227191119-9d318de5-b9f3-4073-8466-f0c355740034.png" width="400"></img>
     * #### LOGOUT
