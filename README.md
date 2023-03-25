@@ -3,6 +3,8 @@
 * ### ABOUT<br>
    * The portfolio management application is a comprehensive platform that facilitates investment tracking <br> and performance monitoring for users. The application offers a user-friendly interface, which displays<br> the user's holdings, transactions, and performance metrics.
    * It is built on django framework and uses sql database.
+   * The portfolio management project has been extended to develop an analysis tool to enable the user to effectively monitor his/her investments and make informed futher investment decisions.
+   * The analysis tool has been developed using Google Colab and ipywidgets library.
  <hr>
  
  
