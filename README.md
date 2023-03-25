@@ -46,7 +46,7 @@
     
  * ### OVERVIEW
     * ### REGISTER
-      <img src="![image](https://user-images.githubusercontent.com/111197294/227714950-55ed6f37-df06-4924-b74d-3f066fbe4e61.png)></img>
+      <img src="https://user-images.githubusercontent.com/111197294/227714950-55ed6f37-df06-4924-b74d-3f066fbe4e61.png" width="600"></img>
     * #### HOME
       <img src="https://user-images.githubusercontent.com/96441611/227183299-162c32a3-8162-4d6c-8da4-a167eea1c162.png" width="600"></img>
     * #### DASHBOARD
@@ -71,7 +71,7 @@
    * #### RISHIKA 
    * #### NIHARIKA
    * #### SNEHIL
-   * #### ANISHA
+   * #### ANISHA SHARMA
    * #### KOMAL
     
   
