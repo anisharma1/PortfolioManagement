@@ -1,29 +1,47 @@
 {% include "PortfolioManagerHome/base.html" %}
 
-<div class="col-md-6">
-  <div class="bio-content">
-      <h1>My Stocks</h1>
-          <table class="table table-striped custab">
-            {% for ch in CurrentHoldings %}
-              <tr>
-                  <td><strong>Stock-Name</strong></td>
-                  <td>Tesla</td>
-              </tr>
-              <tr>
-                  <td><strong>Quantity Held:</strong></td>
-                  <td>{{ch.quantity}}</td>
-              </tr>
-              <tr>
-                  <td><strong>Investment in Stock:</strong></td>
-                  <td> {{ch.investment_in_stock}}</td>
-              </tr>
-              <tr>
-                <td><p><input type="number" required name="qts" min="1" max="10"></p></td>
-                <td><input type="submit" value="delete"> </input></td>
-              </tr>
-
-              {% endfor %}
-
-          </table>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stock Table</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+		tr:hover {
+			background-color: #f5f5f5;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Stock Name</th>
+				<th>PnL</th>
+				<th>Quantity Held</th>
+				<th>Investment in Stock</th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for ch in CurrentHoldings %}
+			<tr>
+				<td>{{ch.name}}</td>
+				<td>{{ch.PnL}}</td>
+				<td>{{ch.quantity}}</td>
+				<td>{{ch.investment_in_stock}}</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
