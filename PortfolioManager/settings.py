@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'portfoliomanagement',
         'USER': 'root',
-        'PASSWORD': 'Sn@07042004',
+        'PASSWORD': '<password>',
         'HOST': '127.0.0.1',
         'PORT': '3306'
     }
