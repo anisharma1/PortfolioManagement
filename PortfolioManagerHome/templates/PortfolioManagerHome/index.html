@@ -3,6 +3,35 @@
 {% extends "PortfolioManagerHome/base.html" %}
 
 {% block content %}
-	<p>	PORTFOLIO MANAGEMENT</p>
-	<p>THIS SITE AIMS TO HELP THE USES TO EFFICIENTLY MANAGE THEIR STOCK PORTFOLIOS, BY PROVIDING THEM WITH EXPERT INSIGHTS INTO THE MARKET.</p>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio Management Website</title>
+</head>
+<body>
+	<h1>Welcome to our Portfolio Management Website</h1>
+	<table cellspacing="20">
+		<tr>
+			<td>
+				<h2>Track Your Investments</h2>
+				<p>Our website allows you to track your investments in real-time, so you always know where your money is going.</p>
+				<a href="#">Learn More</a>
+			</td>
+			<td>
+				<h2>Create a Portfolio</h2>
+				<p>Our portfolio management tools allow you to create and manage multiple investment portfolios, all in one place.</p>
+				<a href="{% url 'users:register' %}">Get started with us today!!</a>
+			</td>
+			<td>
+				<h2>Get Investment Advice</h2>
+				<p>Our advanced analysis tool can help you make informed investment decisions based on your financial goals and risk tolerance.</p>
+				<a href="#">Analysis Tool</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
 {% endblock content %}

@@ -28,33 +28,22 @@ def logout(request):
 
 
 def dashboard(request):
-  
   """Fetches stock information for logged in user """
-
 #   filters users according to logged in user
   curUser=Users.objects.filter(name=request.user.username)
 
   return render(request,'portfolio/dashboard.html',{'curUser' :curUser})
 
-
-
-
 def stockprofiles(request):
-  
   """"Fetches the stocks of logged in user"""
-
   #   filters users according to logged in user
-  uid=Users.objects.filter(name=request.user.username)[0].userid
-  ch=CurrentHoldings.objects.filter(userid=uid)
+  #uid=Users.objects.filter(name=request.user.username)[0].userid
+  #ch=CurrentHoldings.objects.filter(userid=uid)
 
-  return render(request, 'portfolio/stockprofiles.html', {'CurrentHoldings': ch})
-
-
+  return render(request, 'portfolio/stockprofiles.html')
 
 def stocks(request):
-  
   """Fetches historical stocks data"""
-
   stock_list = Stocks.objects.all()
   red=ValuationStocks.objects.filter(date='2018-02-27')
   return render(request, 'portfolio/stocks.html', {'Stocks': stock_list,'ValuationStocks':red})

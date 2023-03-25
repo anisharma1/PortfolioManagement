@@ -1,13 +1,10 @@
-<!------------------HOMEPAGE TO WHICH USER IS REDIRECTED AFTER SUCCESSFUL LOGIN ----------------------->
-
 <p>
 	{% if user.is_authenticated %}
-		Hello, {{ user.username          }}.
+		Hello, {{ user.username             }}.
 		<a href="{% url 'PortfolioManagerHome:index' %}">Home</a>
 		<a href="{% url 'users:dashboard' %}">Dashboard</a>
 		<a href="{% url 'users:stockprofiles' %}">Stock_Profiles</a>
 		<a href="{% url 'users:stocks' %}">All_Stocks</a>
-		
 		<a href="{% url 'users:logout' %}">Log Out</a>
  	{% else %}
 		<a href="{% url 'PortfolioManagerHome:index' %}">Home</a>
