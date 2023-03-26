@@ -38,10 +38,12 @@ def dashboard(request):
 def stockprofiles(request):
   """"Fetches the stocks of logged in user"""
   #   filters users according to logged in user
-  #uid=Users.objects.filter(name=request.user.username)[0].userid
-  #ch=CurrentHoldings.objects.filter(userid=uid)
+	
+  uid=Users.objects.filter(name=request.user.username)[0].userid
+  ch=CurrentHoldings.objects.filter(userid=uid)
 
-  return render(request, 'portfolio/stockprofiles.html')
+  return render(request, 'portfolio/stockprofiles.html', {'CurrentHoldings': ch})
+
 
 def stocks(request):
   """Fetches historical stocks data"""
