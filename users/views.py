@@ -24,7 +24,8 @@ def register(request) :
 	return render(request, 'registration/register.html', context)
 
 def logout(request):
-  return render(request, 'portfolio/logout.html')
+  """Logout Page"""
+  return render(request, 'registration/logout.html')
 
 
 def dashboard(request):
